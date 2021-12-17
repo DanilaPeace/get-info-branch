@@ -144,6 +144,12 @@ contract Data is IData, IndexResolver {
         addrTrusted = _addrTrusted;
     }
 
+    function getRarity() public returns(
+        string rarityName
+    ) {
+        rarityName = _rarityName;
+    }
+
     function rightsTransferabilityStatus() public view override onlyOwnerOrTrusted returns(bool status) {
         status = _isRightsTransferable;
     }
